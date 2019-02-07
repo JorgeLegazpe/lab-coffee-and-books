@@ -6,7 +6,7 @@ router.get("/new", (req, res, next) => {
   res.render("places/new");
 });
 
-router.get("/places/list", (req, res, next) => {
+router.get("/list", (req, res, next) => {
   placeSchema.find().then(places => {
     res.render("places/list", { places });
   });
