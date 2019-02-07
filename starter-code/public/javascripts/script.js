@@ -20,7 +20,7 @@ function startMap() {
     lat: 41.3977381,
     lng: 2.190471916
   };
-  const map = new google.maps.Map(document.getElementById("map"), {
+  map = new google.maps.Map(document.getElementById("map"), {
     zoom: 12,
     center: ironhackBCN
   });
@@ -33,10 +33,8 @@ function showMarkers() {
       new google.maps.Marker({
         map: map,
         position: {
-          lat: 41.3977381,
-          lng: 2.190471916
-          // lat: place.location.coords.lat,
-          // lng: place.location.coords.lng
+          lat: place.location.coords.lat,
+          lng: place.location.coords.lng
         },
         title: place.name
       });
